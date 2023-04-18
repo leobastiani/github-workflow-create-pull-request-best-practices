@@ -6,5 +6,11 @@
     ":automergeMinor",
     ":disablePeerDependencies",
     "schedule:automergeDaily"
+  ],
+  "packageRules": [
+    {
+      "matchPaths": ["report.txt"],
+      "automerge": true
+    }
   ]
 }
