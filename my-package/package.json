@@ -17,7 +17,7 @@
     "@types/jest": "29.5.0",
     "@typescript-eslint/eslint-plugin": "5.59.0",
     "@typescript-eslint/parser": "5.59.0",
-    "ansi-escapes": "4.3.2",
+    "ansi-escapes": "6.1.0",
     "asyncro": "3.0.0",
     "babel-plugin-annotate-pure-calls": "0.4.0",
     "babel-plugin-dev-expression": "0.2.3",
