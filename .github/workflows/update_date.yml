@@ -15,6 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Make changes to pull request
         run: ([ -n "${{ github.event.inputs.date }}" ] && echo "${{ github.event.inputs.date }}" || date +%s) | tee report.txt
@@ -22,9 +24,7 @@ jobs:
       - name: Create pull request
         uses: peter-evans/create-pull-request@v5
         with:
-          author: 'Renovate Bot <renovate@whitesourcesoftware.com>'
-          branch: 'chore/update-static-data'
-          committer: 'Renovate Bot <renovate@whitesourcesoftware.com>'
+          labels: automerge
 
       # https://github.com/peter-evans/create-pull-request/blob/2827897dcca3eb94b42cba2228d9abc3ff04185e/docs/examples.md#debugging-github-actions
       - name: Dump GitHub context
