@@ -4,6 +4,7 @@
     "config:base",
     "group:allNonMajor",
     ":automergeMinor",
-    ":disablePeerDependencies"
+    ":disablePeerDependencies",
+    "schedule:automergeDaily"
   ]
 }
