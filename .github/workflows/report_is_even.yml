@@ -1,0 +1,10 @@
+name: Report is even
+on:
+  push:
+jobs:
+  reportIsEven:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: (( $(cat report.txt) % 2 == 0 ))
