@@ -22,7 +22,7 @@ jobs:
         run: ([ -n "${{ github.event.inputs.date }}" ] && echo "${{ github.event.inputs.date }}" || date +%s) | tee report.txt
 
       - name: Create pull request
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v6
         with:
           labels: automerge
 
